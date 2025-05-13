@@ -1,0 +1,49 @@
+.acf-custom-icon-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.acf-custom-icon-picker .icon-option {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30,40,90,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.acf-custom-icon-picker .icon-option.selected,
+.acf-custom-icon-picker .icon-option:focus {
+  border-color: #0073aa;
+  background: #e6f4fa;
+  box-shadow: 0 4px 16px rgba(0,115,170,0.10);
+}
+
+.acf-custom-icon-picker .icon-option:hover {
+  border-color: #0073aa;
+  background: #f0f8ff;
+  box-shadow: 0 4px 16px rgba(0,115,170,0.08);
+}
+
+.acf-custom-icon-picker .icon-option img,
+.acf-custom-icon-picker .icon-option i {
+  width: 70%;
+  height: 70%;
+  max-width: 38px;
+  max-height: 38px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.acf-custom-icon-picker .icon-option small {
+  display: block;
+}
