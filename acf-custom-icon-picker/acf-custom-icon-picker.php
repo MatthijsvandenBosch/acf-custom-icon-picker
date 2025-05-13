@@ -126,7 +126,16 @@ function acf_icon_picker_settings_page() {
 <div class="wrap">
 	<h1><?php _e( 'Icon Library', 'acf' ); ?></h1>
 	<form method="post" action="options.php">
-		<?php settings_fields( 'acf_icon_picker' ); ?>
+		<?php
+			// nonce & optie‐groep aanmaken
+			settings_fields( 'acf_icon_picker' );
+
+			// toon WP melding (“Settings saved”) & eventuele fouten uit sanitize
+			settings_errors( 'acf_icon_picker' );
+
+			// haal evt. vers geüpdatete icons opnieuw op
+			$icons = get_option( 'acf_icon_picker_icons', array() );
+		?>
 		<table id="icon-picker-table" class="widefat fixed">
 			<thead>
 				<tr>
